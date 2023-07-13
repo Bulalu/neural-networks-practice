@@ -4,7 +4,7 @@ def remove_empty_lines(file_path):
         lines = file.readlines()
 
     # Remove empty lines
-    lines = [line for line in lines if line.strip() != '']
+    lines = [line.lower() for line in lines if line.strip() != '']
 
     # Write the modified lines back to the file
     with open(file_path, 'w') as file:
